@@ -44,7 +44,7 @@ $$
 Define the scaled dual variable $u = \frac{1}{\rho} \lambda$, then the augmented Lagrangian function can be expressed as 
 
 $$
-L(x, z, u) = f(x) + g(z) + \frac{\rho}{2} \Vert Ax + Bz - c + u \Vert^2_2 - \frac{\rho}{2} \Vert u \Vert^2_2.
+L_\rho(x, z, u) = f(x) + g(z) + \frac{\rho}{2} \Vert Ax + Bz - c + u \Vert^2_2 - \frac{\rho}{2} \Vert u \Vert^2_2.
 $$
 
 Thus, the ADMM updates become 
