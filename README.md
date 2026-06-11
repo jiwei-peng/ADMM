@@ -6,7 +6,7 @@ $$
 \min_{x,z}  f(x) + g(z)\quad \text{subject to} \quad Ax + Bz = c,
 $$
 
-where $f:\mathbb{R}^n \to \mathbb{R}$ and $g: \mathbb{R}^m \to \mathbb{R}$ are convex functions. 
+where $f:\bf{R}^n \to \bf{R}$ and $g: \bf{R}^m \to \bf{R}$ are convex functions. 
 
 
 ## Augmented Lagrangian
@@ -14,7 +14,7 @@ where $f:\mathbb{R}^n \to \mathbb{R}$ and $g: \mathbb{R}^m \to \mathbb{R}$ are c
 The augmented Lagrangian function associated with this problem is formulated as
 
 $$
-\mathcal{L}_\rho(x,z,\lambda)=f(x)+g(z)+\lambda^T(Ax+Bz-c)+\frac{\rho}{2}\Vert Ax+Bz-c \Vert_2^2
+L_\rho(x,z,\lambda)=f(x)+g(z)+\lambda^T(Ax+Bz-c)+\frac{\rho}{2}\Vert Ax+Bz-c \Vert_2^2 
 $$
 
 where $\rho > 0$ is the penalty parameter, and $\lambda$ is the dual variable.
@@ -27,11 +27,11 @@ The ADMM iterations are given by
 
 
 $$ 
-x^{k+1} = \underset{x}{\text{argmin}}~ \mathcal{L}_\rho(x,z^k,\lambda^k),
+x^{k+1} = \underset{x}{\text{argmin}}~ L_\rho(x,z^k,\lambda^k),
 $$
 
 $$ 
-z^{k+1} = \underset{z}{\text{argmin}}~ \mathcal{L}_\rho(x^{k+1}, z, \lambda^k), 
+z^{k+1} = \underset{z}{\text{argmin}}~ L_\rho(x^{k+1}, z, \lambda^k), 
 $$
 
 $$ 
@@ -44,7 +44,7 @@ $$
 Define the scaled dual variable $u = \frac{1}{\rho} \lambda$, then the augmented Lagrangian function can be expressed as 
 
 $$
-\mathcal{L}_\rho(x, z, u) = f(x) + g(z) + \frac{\rho}{2} \Vert Ax + Bz - c + u \Vert^2_2 - \frac{\rho}{2} \Vert u \Vert^2_2.
+L_\rho(x, z, u) = f(x) + g(z) + \frac{\rho}{2} \Vert Ax + Bz - c + u \Vert^2_2 - \frac{\rho}{2} \Vert u \Vert^2_2.
 $$
 
 Thus, the ADMM updates become 
