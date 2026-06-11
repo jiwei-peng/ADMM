@@ -27,11 +27,11 @@ The ADMM iterations are given by
 
 
 $$ 
-x^{k+1} = \underset{x}{\operatorname{argmin}}~ \mathcal{L}_\rho(x,z^k,\lambda^k),
+x^{k+1} = \underset{x}{\text{argmin}}~ \mathcal{L}_\rho(x,z^k,\lambda^k),
 $$
 
 $$ 
-z^{k+1} = \underset{z}{\operatorname{argmin}}~ \mathcal{L}_\rho(x^{k+1}, z, \lambda^k), 
+z^{k+1} = \underset{z}{\text{argmin}}~ \mathcal{L}_\rho(x^{k+1}, z, \lambda^k), 
 $$
 
 $$ 
@@ -50,11 +50,11 @@ $$
 Thus, the ADMM updates become 
 
 $$ 
-x^{k+1} = \underset{x}{\operatorname{argmin}}~ f(x) +\frac{\rho}{2}\Vert Ax+Bz^k-c+u^k\Vert_2^2 ,
+x^{k+1} = \underset{x}{\text{argmin}}~ f(x) +\frac{\rho}{2}\Vert Ax+Bz^k-c+u^k\Vert_2^2 ,
 $$
 
 $$ 
-z^{k+1} = \underset{z}{\operatorname{argmin}}~ g(z)+\frac{\rho}{2}\Vert Ax^{k+1}+Bz-c+u^k \Vert_2^2 ,
+z^{k+1} = \underset{z}{\text{argmin}}~ g(z)+\frac{\rho}{2}\Vert Ax^{k+1}+Bz-c+u^k \Vert_2^2 ,
 $$
 
 
